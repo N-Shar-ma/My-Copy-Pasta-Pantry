@@ -42,8 +42,8 @@ function createSnippetElement (text, id) {
     return snippet
 }
 
-function displaySnippet (snippet) {
-    snippetsSection.appendChild(snippet)
+function displaySnippet (snippetEl) {
+    snippetsSection.appendChild(snippetEl)
 }
 
 function deleteSnippet (snippetEl) {

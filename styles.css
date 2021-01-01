@@ -1,0 +1,39 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color:burlywood;
+}
+
+h1 {
+    color: tomato;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    text-align: center;
+    background-color:mistyrose;
+    padding: 1rem;
+    margin: 0;
+}
+
+#snippets {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-rows: 30vh;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.snippet {
+    background-color: lemonchiffon;
+    border-radius: 1rem;
+    padding: 1rem;
+    color:tomato;
+}
+
+button {
+    color: tomato;
+    background-color:mistyrose;
+    border-radius: 0.3rem;
+    border: none;
+    padding: 0.2rem 0.4rem;
+}
