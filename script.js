@@ -1,6 +1,7 @@
 const snippetsSection = document.querySelector("#snippets")
 const newSnippetEl = document.querySelector("#new-snippet")
 const snippetTemplate = document.querySelector("#snippet-template")
+const fab = document.querySelector("#fab")
 
 const LOCAL_STORAGE_KEY = "copyPastaSnippets"
 
@@ -14,8 +15,12 @@ function handleClick(e) {
         copyToClipboard(e.target.closest(".snippet").querySelector(".snippet-text").innerText);
     } else if (e.target.closest("#save-snippet-button")) {
         addNewSnippet(newSnippetEl.value)
+        newSnippetEl.value = ""
     } else if (e.target.closest(".delete-button")) {
         deleteSnippet(e.target.closest(".snippet"))
+    } else if (e.target.closest("#fab")) {
+        fab.classList.add("hidden")
+        newSnippetEl.parentElement.classList.remove("hidden")
     }
 }
 
@@ -24,6 +29,7 @@ function copyToClipboard(text) {
 }
 
 function addNewSnippet (text) {
+    if(text.trim()=="") return
     const id = Date.now().toString()
     saveSnippetObject(text, id)
     const snippet = createSnippetElement(text, id)

@@ -7,6 +7,7 @@ html, body {
     width: 100%;
     height: 100%;
     background-color:bisque;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -23,7 +24,7 @@ h1 {
 #snippets {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-template-rows: 30vh;
+    grid-auto-rows: 25vh;
     grid-gap: 10px;
     padding: 10px;
 }
@@ -47,9 +48,12 @@ h1 {
 
 button {
     border: none;
+    cursor: pointer;
 }
 
-.copy-button {
+.copy-button, #save-snippet-button {
+    font-size: 1.2rem;
+    color: lemonchiffon;
     background-color: darkred;
     flex-grow: 1;
     border-right: 2px solid darkred;
@@ -62,4 +66,52 @@ button {
 .snippet-text {
     flex-grow: 1;
     padding: 0.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#input-area {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    transition: right 300ms ease-in-out;
+}
+
+#input-area.hidden {
+    right: -200px;
+}
+
+#fab {
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    transform: translate(50%, 50%);
+    height: 50px;
+    width: 50px;
+    display: flex;
+    place-items: center;
+    place-content: center;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    background-color: darkred;
+    color: lemonchiffon;
+    transition: right 300ms ease-in-out;
+}
+
+#fab.hidden {
+    right: -25px;
+}
+
+#new-snippet {
+    flex-grow: 1;
+    padding: 0.5rem;
+    background-color: lemonchiffon;
+}
+
+#save-snippet-button {
+    flex-grow: 0;
 }

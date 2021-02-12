@@ -11,13 +11,16 @@
     <h1>My Copy Pasta Pantry</h1>
     <section id="snippets">
     </section>
-    <textarea rows="5" id="new-snippet" placeholder="Type or paste text here for later pasting"></textarea>
-    <button id="save-snippet-button">Save</button>
+    <section id="input-area" class="hidden">
+        <textarea rows="5" id="new-snippet" placeholder="Type or paste text here for later pasting"></textarea>
+        <button id="save-snippet-button">Save</button>
+    </section>
+    <button id="fab">+</button>
     <template id="snippet-template">
         <div class="snippet">
             <div class="buttons">
                 <button class="copy-button">📋Copy</button>
-                <button class="delete-button">❌</button>
+                <button class="delete-button" title="delete">❌</button>
             </div>
             <div class="snippet-text">Test text for copying</div>
         </div>
