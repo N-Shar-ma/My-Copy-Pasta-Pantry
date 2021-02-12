@@ -21,6 +21,9 @@ function handleClick(e) {
     } else if (e.target.closest("#fab")) {
         fab.classList.add("hidden")
         newSnippetEl.parentElement.classList.remove("hidden")
+    } else if (e.target.closest("#hide-input-area-button")) {
+        fab.classList.remove("hidden")
+        newSnippetEl.parentElement.classList.add("hidden")
     }
 }
 

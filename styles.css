@@ -81,6 +81,14 @@ button {
     transition: right 300ms ease-in-out;
 }
 
+#hide-input-area-button {
+    position: absolute;
+    bottom: 100%;
+    background-color: darkred;
+    color: lemonchiffon;
+    padding: 0.2rem;
+}
+
 #input-area.hidden {
     right: -200px;
 }
