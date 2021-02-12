@@ -57,6 +57,7 @@ button {
     background-color: darkred;
     flex-grow: 1;
     border-right: 2px solid darkred;
+    border-radius: 0;
 }
 
 .delete-button {
