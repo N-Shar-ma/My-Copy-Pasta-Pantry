@@ -2,6 +2,7 @@ const snippetsSection = document.querySelector("#snippets")
 const newSnippetEl = document.querySelector("#new-snippet")
 const snippetTemplate = document.querySelector("#snippet-template")
 const fab = document.querySelector("#fab")
+const toastNotification = document.querySelector("#toast-notification")
 
 const LOCAL_STORAGE_KEY = "copyPastaSnippets"
 
@@ -12,7 +13,9 @@ document.addEventListener("click", handleClick)
 
 function handleClick(e) {
     if(e.target.closest(".copy-button")) {
-        copyToClipboard(e.target.closest(".snippet").querySelector(".snippet-text").innerText);
+        copyToClipboard(e.target.closest(".snippet").querySelector(".snippet-text").innerText)
+        toastNotification.classList.add("show")
+        setTimeout(()=>toastNotification.classList.remove("show"), 2000)
     } else if (e.target.closest("#save-snippet-button")) {
         addNewSnippet(newSnippetEl.value)
         newSnippetEl.value = ""

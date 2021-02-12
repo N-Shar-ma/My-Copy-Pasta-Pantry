@@ -137,3 +137,21 @@ button {
 #save-snippet-button {
     flex-grow: 0;
 }
+
+#toast-notification {
+    position: absolute;
+    background-color: lemonchiffon;
+    color: darkred;
+    border: 2px solid darkred;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+    bottom: 1vh;
+    left: 50%;
+    transform: translateX(-50%) scale(var(--s, 0));
+    font-size: 1.5rem;
+    transition: transform 500ms ease-in-out;
+}
+
+#toast-notification.show {
+    --s: 1;
+}
