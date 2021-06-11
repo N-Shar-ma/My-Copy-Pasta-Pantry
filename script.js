@@ -1,3 +1,7 @@
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register("service-worker.js");
+}
+
 const snippetsSection = document.querySelector("#snippets")
 const newSnippetEl = document.querySelector("#new-snippet")
 const snippetTemplate = document.querySelector("#snippet-template")
