@@ -1,5 +1,6 @@
 if (navigator.serviceWorker) {
     navigator.serviceWorker.register("service-worker.js");
+    console.log("service worker registered")
 }
 
 const snippetsSection = document.querySelector("#snippets")
